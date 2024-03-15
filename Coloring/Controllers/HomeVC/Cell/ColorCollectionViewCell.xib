@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ColorCollectionViewCell" customModule="Coloring" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="29" height="30"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="29" height="30"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmS-3Q-MJy">
+                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLT-CO-iiS">
+                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="plusBtnClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="wYU-l5-A4q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Grad1ThemF14452"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="MZc-zd-CmP"/>
+                            <constraint firstItem="cLT-CO-iiS" firstAttribute="leading" secondItem="AmS-3Q-MJy" secondAttribute="leading" id="QAN-dI-D2D"/>
+                            <constraint firstAttribute="height" constant="24" id="dB0-8f-9AB"/>
+                            <constraint firstItem="cLT-CO-iiS" firstAttribute="top" secondItem="AmS-3Q-MJy" secondAttribute="top" id="jDC-XW-8j7"/>
+                            <constraint firstAttribute="trailing" secondItem="cLT-CO-iiS" secondAttribute="trailing" id="vun-iV-hoI"/>
+                            <constraint firstAttribute="bottom" secondItem="cLT-CO-iiS" secondAttribute="bottom" id="zle-gL-dwG"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="desireCorner">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="AmS-3Q-MJy" secondAttribute="bottom" constant="6" id="CjO-6n-4uB"/>
+                <constraint firstAttribute="trailing" secondItem="AmS-3Q-MJy" secondAttribute="trailing" constant="5" id="P7X-qu-nrB"/>
+                <constraint firstItem="AmS-3Q-MJy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="goh-W9-5XN"/>
+                <constraint firstItem="AmS-3Q-MJy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lJN-9x-3Ve"/>
+            </constraints>
+            <size key="customSize" width="49" height="47"/>
+            <connections>
+                <outlet property="colorView" destination="AmS-3Q-MJy" id="trY-kl-bBk"/>
+                <outlet property="heightConstraint" destination="dB0-8f-9AB" id="9db-jh-EUG"/>
+                <outlet property="plusBtn" destination="cLT-CO-iiS" id="gZ6-f4-NF1"/>
+                <outlet property="widthConstraint" destination="MZc-zd-CmP" id="xp6-0r-XII"/>
+            </connections>
+            <point key="canvasLocation" x="137.40458015267174" y="18.30985915492958"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="Grad1ThemF14452">
+            <color red="0.94499999284744263" green="0.2669999897480011" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
